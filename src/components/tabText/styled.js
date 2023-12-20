@@ -95,6 +95,7 @@ ${boxShadowAnimation} 5.5s infinite; /* Add the changing box-shadow color animat
 export const Title = styled(TypeIt)`
   font-size: 30px;
   color: ${colors.primaryCyan};
+  text-shadow: ${vars.textShadow};
 `;
 
 export const ButtonWrapper = styled.div`
