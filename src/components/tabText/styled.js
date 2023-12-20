@@ -62,8 +62,13 @@ const boxShadowAnimation = keyframes`
   }
 `;
 
+
 export const TitleWrapper = styled.div`
-margin-top: 30%;
+width: 100%;
+justify-content: space-between;
+display: flex;
+flex-direction: column;
+align-items: center;
 padding: 20px;
 border-radius: 5px;
 text-align: center;
@@ -81,13 +86,18 @@ ${boxShadowAnimation} 5.5s infinite; /* Add the changing box-shadow color animat
 
 
 &.visible {
-  margin-top: 40%;
-  width: 75%;
-  height: 40%;
+    margin-top: 90px;
+    width: 100%;
+    height: 60%;
 }
 `;
 
 export const Title = styled(TypeIt)`
   font-size: 30px;
   color: ${colors.primaryCyan};
+`;
+
+export const ButtonWrapper = styled.div`
+display: flex;
+gap: 60px;
 `;

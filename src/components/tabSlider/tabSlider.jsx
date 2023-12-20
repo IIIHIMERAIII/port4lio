@@ -8,7 +8,7 @@ import bg1 from '../../images/link_bg1.webp';
 import bg2 from '../../images/link_bg2.webp';
 import bg3 from '../../images/link_bg3.webp';
 
-const items = [{image: bg1, title: 'Job', text: tabText.tab1 },{image: bg2, title: 'Partfolio' , text: tabText.tab2}, {image: bg3, title: 'Contacts', text: tabText.tab3}];
+const items = [{image: bg1, title: 'Job', text: tabText.tab1},{image: bg2, title: 'Partfolio' , text: tabText.tab2}, {image: bg3, title: 'Contacts', text: tabText.tab3}];
 
 
 export const TabSlider = () => {

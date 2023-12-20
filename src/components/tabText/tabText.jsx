@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { TitleWrapper, Title } from "./styled";
+import { Button } from "../button/button";
+import {TitleWrapper, Title, ButtonWrapper} from "./styled";
 
 export const TabText = ({ text }) => {
   // Create a ref to hold the TypeIt instance
@@ -26,6 +27,14 @@ export const TabText = ({ text }) => {
           typeItRef.current = instance;
         }}
       />
+        <ButtonWrapper>
+            <Button
+              title='Close'
+             />
+                <Button
+              title='Apply'
+             />
+        </ButtonWrapper>
     </TitleWrapper>
   );
 };

@@ -11,8 +11,10 @@ display: flex;
 export const TabItem = styled.li`
 width: 640px;
 height: 1000px;
+padding: 50px;
 background: url(${props => props.src}) center/cover;
-justify-content: center;
+align-items: center;
+flex-direction: column;
 display: flex;
 cursor: pointer;
 width: ${props => (props.selected ? "50%" : "35%")};

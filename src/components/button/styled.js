@@ -3,12 +3,11 @@ import styled from 'styled-components';
 import { vars } from '../../styles/colors';
 
 export const BtnContainer = styled.div`
-position: fixed;
+width: 270px;
 `;
 
 
 export const Btn = styled.button`
-  margin-top: 50px;
   width: 270px;
   height: 50px;
   background-color: transparent;
@@ -56,5 +55,5 @@ export const BtnTitle = styled.a`
 font-size: 23px;
 line-height: 1.3;
 letter-spacing: 0.135em;
-`
+`;
   

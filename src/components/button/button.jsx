@@ -1,9 +1,9 @@
 import { BtnContainer, Btn, BtnTitle } from "./styled"
 
 
-export const Button = ({title}) => {
+export const Button = ({title, position }) => {
     return (
-        <BtnContainer>
+        <BtnContainer style={{ position: position }}>
             <Btn>
                 <BtnTitle>{title}</BtnTitle>
             </Btn>
