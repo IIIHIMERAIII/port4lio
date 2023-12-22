@@ -1,7 +1,8 @@
 export const colors = {
     primaryCyan: '#5ffbfa',
+    grayBg: '#535353',
     glassCyan: '#012d2c6b',
-    activeCyan: '#01757247'
+    activeCyan: '#01757247',  
 }
 
 export const vars = {

@@ -21,7 +21,7 @@ export const TabSlider = () => {
 
 
     return (
-        <SliderContainer>
+        <SliderContainer id="tabSlider">
             <TabList>
             {items.map((item, index) => (
                     <TabItem 
