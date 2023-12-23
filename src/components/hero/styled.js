@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
+import heroBg from  '../../images/PB.jpg'
+
 import {colors } from '../../styles/colors';
+
 
 export const HeroContainer = styled.div`
   text-align: center;
@@ -9,6 +12,7 @@ export const HeroContainer = styled.div`
   opacity: 0;
   transform: translateY(-100%);
   background-color: ${colors.grayBg}; /* Add  background color */
+  background-image: url(${heroBg});
   transition: opacity 2.7s ease, transform 2.7s ease, background-color 1.7s ease; /* Include background-color in the transition */
 
   &.visible {

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { vars } from '../../../styles/colors';
+
 export const SliderContainer = styled.div`
 padding-top: 120px;
 padding-bottom: 500px;
@@ -11,6 +13,14 @@ display: flex;
 `;
 
 export const SliderItem = styled.li`
+
+
+// light imitation on border 
+
+box-shadow: ${vars.cardsShadow};
+
+
+// margins for cards 
 
 margin-right: ${(props) => (props.index === 0 || props.index === 1  ? '-100px' : props.index === 2 ? '200px' : '0')};
 margin-left: ${(props) => (props.index === 5 || props.index === 6 ? '-100px' : props.index === 4 ? '200px' : '0')};
@@ -41,7 +51,14 @@ width: ${(props) => {
             return '25%'
         }
     }};
-    
+
+height: ${(props) => {
+    if (props.index === 3) {
+        return '70%'
+    }
+}};
+
+   
 // margin position
 margin-bottom:${(props) => {
     if (props.index <= 2) {
