@@ -19,8 +19,7 @@ cursor: pointer;
 width: ${props => (props.selected ? "50%" : "35%")};
 height: ${props => (props.selected ? "1000px;" : "1000px;")};
 background: url(${props => props.src}) center/cover;
-
-transition: all 1.7s ease; /* Smooth transition animation */
+transition: all 2.7s ease; /* Smooth transition animation */
 
 filter: brightness(${props => (props.selected ? "1" : "0.5")}); /* Adjust brightness for unselected tabs */
 
