@@ -1,4 +1,10 @@
-import { SliderContainer, SliderList, SliderItem, SliderImg } from './styled'
+import { 
+    SliderOverlay,
+    SliderContainer, 
+    SliderList, 
+    SliderItem, 
+    SliderImg 
+} from './styled'
 
 import h1 from '../../../images/h1.jpg'
 import h2 from '../../../images/h2.jpg'
@@ -12,19 +18,21 @@ const items = [h1, h2, h3, h4, h5, h6, h7];
 
 export const HeroSlider = () => {
     return (
-        <SliderContainer>
-            <SliderList>
-            {items.map((item, index) => (
-                    <SliderItem 
-                    key={index}
-                    index={index}
-                    >
-                        <SliderImg
-                            src={item}
-                        />
-                    </SliderItem>
-            ))}
-            </SliderList>
-        </SliderContainer>
+        <SliderOverlay>
+            <SliderContainer>
+                <SliderList>
+                {items.map((item, index) => (
+                        <SliderItem 
+                        key={index}
+                        index={index}
+                        >
+                            <SliderImg
+                                src={item}
+                            />
+                        </SliderItem>
+                ))}
+                </SliderList>
+            </SliderContainer>
+        </SliderOverlay>
     )
 }

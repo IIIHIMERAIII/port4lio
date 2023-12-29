@@ -7,11 +7,13 @@ export const colors = {
     grayBg: '#535353',
     glassCyan: '#012d2c6b',
     activeCyan: '#01757247',  
+    questOverlay: '#000000d9',
     questBtn: '#11ffa663',
     questBtnFill: '#eefb9663',
     questBtnFillHover: '#E5CDB1',
     questBtnHover: '#e4b119b8',
-    questBtnBgHover: '#B05117'
+    questBtnBgHover: '#B05117',
+    questTabOverlay:'#01443eb2'
 }
 
 
@@ -28,4 +30,6 @@ export const vars = {
     questBtnShadow2: '0px 0px 20px 20px #a45909ab',
     questBtnShadow3: '0px 0px 10px 10px #ffa93bcf',
     questSubTitleBS: '0px 2px 30px 30px #000',
+    questTabShadow: '68px 0px 24px 0px rgba(66, 68, 90, 1)',
+    questTitleShadow: '0px 25px 50px 0px rgba(255, 225, 106, 0.5)'
 }

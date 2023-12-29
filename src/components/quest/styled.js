@@ -1,6 +1,7 @@
 import styled, {keyframes} from 'styled-components';
 
 import {colors, vars} from '../../styles/colors';
+import { animation } from '../../styles/vars';
 
 const moveUpAnimation = keyframes`
   0% {
@@ -45,7 +46,6 @@ animation: translateY(${({ isClick }) => (isClick ? '0px' : '-100px')} 10s ease)
 opacity: ${({ isClick }) => (isClick ? '0' : '1')};
 pointer-events: ${({ isClick }) => (isClick ? 'none' : 'auto')}; // Disable pointer events when animating out
 
-// ... (your other styles)
 
 &.hidden {
   display: none;
@@ -53,7 +53,6 @@ pointer-events: ${({ isClick }) => (isClick ? 'none' : 'auto')}; // Disable poin
 
 // glass filter
 
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 8.5px );
 -webkit-backdrop-filter: blur( 8.5px );
 
@@ -70,8 +69,7 @@ backdrop-filter: blur( 8.5px );
 
 &:not(.hovered) {
   transition: background 1.5s ease, backdrop-filter 3.0s ease, box-shadow 2.5s ease;
-  background: ${colors.backGroundCyan};
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: ${colors.questOverlay};
   backdrop-filter: blur(8.5px);
 }
 `;
@@ -83,6 +81,11 @@ text-align: center;
 border-radius: 15px;
 color: ${colors.white};
 padding: 20px;
+
+// animation prop
+
+cubic-bezier: ${animation.tabCubic};
+transition: all 1.3s ease;
 
 // animation when mouse im button range
 
@@ -112,6 +115,10 @@ box-shadow: ${vars.questSubTitleBS};
 padding: 20px;
 opacity: 0;
 
+// animation prop
+
+transition: all 0.5s ease-out;
+
 // animation when mouse im button range
 
 &.hovered {
@@ -123,7 +130,6 @@ opacity: 0;
 // transition when mouse leaves button range
 
 &:not(.hovered) {
-  transition: transform 1.5s ease, opacity 1.5s ease, border 1.5s ease;
   transform: translateY(0);
   opacity: 0;
   border: none;
@@ -171,16 +177,51 @@ transition: width 1.5s ease, font-size 0.5s ease; /* Adjust the duration and tim
 `;
 
 export const TabTitle = styled.a`
+z-index: 5;
 top: 10%;
+font-family: 'Anton', sans-serif;
 font-size: inherit;
 font-weight: 900;
 letter-spacing: 0.17em;
 line-height: 1.4;
 position: absolute;
 color: ${colors.white};
+
+// border and shadows options
+
+border: 5px solid ${colors.primaryOrange};
+padding: 20px;
+border-radius: 16px;
+box-shadow: 0px 25px 50px 0px rgba(255, 225, 106, 0.5);;
+
+// text animation 
+
+cubic-bezier: ${animation.tabCubic};
+transition: all 1.3s ease;
+
+// glass overlay 
+
+backdrop-filter: blur(10px);
+background: rgba(255, 255, 255, 0.2);
+`;
+
+export const TabImgOverlay = styled.div`
+width: 100%;
+height: 100%;
+top: 0;
+position: absolute;;
+background: ${colors.questTabOverlay};
+z-index: 5;
+
+// OverlayAnimation
+
+cubic-bezier: ${animation.tabCubic};
+transition: opacity 2.5s ease;
 `;
 
 export const TabImg = styled.img`
+z-index: 2;
+position: relative;
 width: 100%;
 height: 100%;
 object-fit: cover;

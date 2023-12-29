@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 import { vars } from '../../../styles/colors';
 
+export const SliderOverlay = styled.div`
+
+`;
+
 export const SliderContainer = styled.div`
 padding-top: 120px;
 padding-bottom: 500px;

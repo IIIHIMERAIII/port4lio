@@ -3,7 +3,8 @@ import { useState } from "react";
 import { 
     QuestContainer, 
     LeftTab, 
-    RightTab, 
+    RightTab,
+    TabImgOverlay,
     TabImg, 
     OnClickContainer, 
     QuestTitle, 
@@ -17,9 +18,11 @@ import { QuestButton } from "../questButton/questButton";
 import LeftTabBg from '../../images/LeftTab.jpg';
 import RightTabBg from '../../images/RightTab.jpg';
 
+import { text } from "../../styles/vars";
 
 export const Quest = () => {
-    const [isHovered, setIsHovered] = useState(false);
+    const [isTabHover, setTabHover ] = useState(0)
+    const [isBgHovered, setIsBgHovered] = useState(false);
     const [isClick,  setIsClick] = useState(false);
     const [isOpen, setOpenTab] = useState(0);
 
@@ -27,32 +30,31 @@ export const Quest = () => {
         if (isClick) {
           // If click is true, set the component to hidden
           setIsClick(false);
-          setIsHovered(false);
+          setIsBgHovered(false);
         }
       };
-      
 
-    console.log(isOpen)
+    console.log(isTabHover)
 
     return (
         <QuestContainer>
             <OnClickContainer 
-                className={`${isHovered ? 'hovered' : ''} ${isClick ? 'hidden' : ''}`}
+                className={`${isBgHovered ? 'hovered' : ''} ${isClick ? 'hidden' : ''}`}
                 isClick={isClick}
                 onTransitionEnd={handleTransitionEnd}
             >
                 <QuestTitle 
-                    className={isHovered ? "hovered" : ""}
+                    className={isBgHovered ? "hovered" : ""}
                 >
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae sit temporibus nesciunt impedit illum ipsa odio vel omnis ex adipisci?
+                    {text.questTitle}
                 </QuestTitle>
-                <QuestSubTitle className={isHovered ? "hovered" : ""}>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae sit temporibus nesciunt. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                <QuestSubTitle className={isBgHovered ? "hovered" : ""}>
+                    {text.questSubTitle}
                 </QuestSubTitle>
                 <QuestButton         
                     className="button"
-                    eventEnter={() => setIsHovered(true)}
-                    eventLeave={() => setIsHovered(false)}
+                    eventEnter={() => setIsBgHovered(true)}
+                    eventLeave={() => setIsBgHovered(false)}
                     eventClick={() => setIsClick(true)}
                 >
                 </QuestButton>
@@ -60,26 +62,38 @@ export const Quest = () => {
             <TabsContainer
                isClick={isClick}
             >
-            <LeftTab
-                onClick={() => setOpenTab(1)}
-            >
-                <TabTitle>
-                    Lorem ipsum dolor sit.
-                </TabTitle>
-                <TabImg
-                    src={LeftTabBg}
-                />
-            </LeftTab>
-            <RightTab
-                onClick={() => setOpenTab(2)}
-            >
-                <TabTitle>
-                    Sit dolor sit ipsum.
-                </TabTitle>
-                <TabImg
-                    src={RightTabBg}
-                />
-            </RightTab>
+                <LeftTab
+                    onClick={() => setOpenTab(1)}
+                    onMouseEnter={() => setTabHover(1)}
+                    onMouseLeave={() => setTabHover(0)}
+                >
+                    {isClick && (
+                        <TabTitle>
+                            {text.questLeftTab}
+                        </TabTitle>
+                    )}
+                    <TabImgOverlay 
+                        style={{ opacity: isTabHover === 1 ? 0 : 1,}} />
+                    <TabImg
+                        src={LeftTabBg}
+                    />
+                </LeftTab>
+                <RightTab
+                    onClick={() => setOpenTab(2)}
+                    onMouseEnter={() => setTabHover(2)}
+                    onMouseLeave={() => setTabHover(0)}
+                >
+                    {isClick && (
+                        <TabTitle>
+                            {text.questRightTab}
+                        </TabTitle>
+                    )}
+                    <TabImgOverlay 
+                        style={{ opacity: isTabHover === 2 ? 0 : 1}} />
+                    <TabImg
+                        src={RightTabBg}
+                    />
+                </RightTab>
             </TabsContainer>
         </QuestContainer>
     )
