@@ -1,10 +1,13 @@
 import { useState } from 'react';
 
-import { HelperContainer, HelperImg, SageNameContainer, SageName  } from './styled';
+import TypeIt from 'typeit-react';
 
-import helper from '../../images/helper.png';
+import { HelperContainer, CharacterContainer, HelperImg, SageNameContainer, SageName } from './styled';
 
-export const Helper = () => {
+import { HelperContext } from '../helperContext/helperContext';
+
+
+export const Helper = ({helper, side, name, btnText}) => {
     const [helperStatus, setHelperStatus] = useState(false);
   
     const onClick = () => {
@@ -12,13 +15,34 @@ export const Helper = () => {
     };
   
     return (
-      <HelperContainer onClick={onClick} animateText={helperStatus}>
-        <HelperImg src={helper} />
-        <SageNameContainer>
-          <SageName  animateText={helperStatus}>
-            Keyle \BluePrincess\
-          </SageName >
-        </SageNameContainer>
+      <HelperContainer onClick={onClick} >
+        {side === 'left' && (
+        <HelperContext
+            context='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, sunt repellendus ut dicta quae blanditiis eius modi! At corporis molestiae veniam omnis iste perferendis illo vero consequatur repellat aperiam alias doloremque laboriosam optio assumenda laborum dolorum voluptatibus neque tenetur quos, cumque rerum voluptas ipsa rem! Distinctio excepturi iusto molestias nemo alias temporibus rem illo dignissimos dicta, neque debitis fugit provident?'
+            btnText={btnText}
+        />
+        )}
+        <CharacterContainer>
+          <HelperImg src={helper} />
+          <SageNameContainer status={helperStatus}>
+            <SageName  status={helperStatus}>
+                <TypeIt
+                  options={{
+                    speed: 200, // Adjust the speed value to control the typing speed
+                    wait: 1500 // Add a 1.5-second delay before typing starts
+                  }}
+                >
+                  {name}
+                </TypeIt>
+            </SageName >
+          </SageNameContainer>
+        </CharacterContainer>
+        {side === 'right' && (
+        <HelperContext
+            context='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, sunt repellendus ut dicta quae blanditiis eius modi! At corporis molestiae veniam omnis iste perferendis illo vero consequatur repellat aperiam alias doloremque laboriosam optio assumenda laborum dolorum voluptatibus neque tenetur quos, cumque rerum voluptas ipsa rem! Distinctio excepturi iusto molestias nemo alias temporibus rem illo dignissimos dicta, neque debitis fugit provident?'
+            btnText={btnText}
+        />
+        )}
       </HelperContainer>
     );
   };

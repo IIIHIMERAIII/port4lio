@@ -10,7 +10,7 @@ box-shadow: ${vars.footerShadows};
 `;
 
 export const SageBg = styled.div`
-padding: 320px 30px 230px 30px;
+padding: 300px 30px 180px 30px;
 background-image: url(${sageBg});
 background-size: cover;
 background-position-y: bottom;

@@ -1,10 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-import TypeIt from 'typeit-react';
-
-import sageBg from '../../images/sageBg.jpg';
-
-
 // helper animations keyframes
 
 const floatingAnimation = keyframes`
@@ -60,22 +55,32 @@ const scaleAnimation = keyframes`
 
 
 export const HelperContainer = styled.div`
-position: absolute;
-width: 20%;
+height: 50%;
+width: 40%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 60px;
+`;
+
+
+export const CharacterContainer = styled.div`
+height: 50%;
+width: 100%;
+display: flex;
+flex-direction: row;
 justify-content: center;
 background: rgba(37, 0, 38, 0.4);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
+backdrop-filter: blur(9px);
 animation: ${floatingAnimation} 5s ease-in-out infinite;
-display: flex;
 flex-direction: column;
 align-items: center;
 
-&:hover, &:focus {
+&:hover {
   animation-play-state: paused;
 }
-
 `;
 
 export const HelperImg = styled.img`
@@ -96,23 +101,29 @@ animation: ${pulseAnimation} 2s infinite, ${opacityAnimation} 2s infinite altern
 
 // hover and focus animations
 
-&:hover, &:focus {
+&:hover {
   animation-play-state: paused;
 }
 
 `;
 
 export const SageNameContainer = styled.div`
-padding: 5px 15px 10px 15px;
-margin-top: 10px;
-margin-bottom: 10px;
+padding: 2px;
+margin-top: 20px;
+margin-bottom: 20px;
 border-top: 2px solid white;
 border-bottom: 2px solid white;
+height: ${props => (props.status ? "150px" : "0")};
+opacity: ${props => (props.status ? "1" : "0")};
+transition: height 1.5s ease-in-out, opacity 1.5s ease-in-out;
 `;
 
-export const SageName = styled(TypeIt)`
+export const SageName = styled.span`
 color: white;
+text-align: center;
 font-family: 'Anton',sans-serif;
-font-size: 32px;
+font-size: 50px;
 font-weight: 900;
 `;
+
+
