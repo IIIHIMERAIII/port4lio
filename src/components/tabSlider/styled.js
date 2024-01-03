@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { colors } from '../../styles/colors';
+
 export const SliderContainer = styled.div`
 position: relative;
 z-index: 100;

@@ -1,5 +1,6 @@
 export const colors = {
     white: '#fff',
+    footerBorder: '#bd093c12',
     primaryCyan: '#5ffbfa',
     primaryOrange: '#B25318',
     subOrange: '#B25318',
@@ -18,6 +19,7 @@ export const colors = {
 
 
 export const vars = {
+    footerShadows: '0 13px 66px rgba(253, 0, 190, 0.18)',
     neonShadows: '0 0 5px #0bf4f3,0 0 5px #5ffbfa inset',
     neonShadowsAnim: '0 0 15px rgba(0, 252, 242, 0.8)',
     neonShadowsAnim2: '0 0 15px rgba(80, 255, 248, 1)',
