@@ -1,13 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-const floatingAnimation = keyframes`
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10%);
-  }
-`;
 
 export const ContextContainer = styled.div`
 width: 100%;
@@ -20,14 +12,13 @@ background: rgba(37, 0, 38, 0.4);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(9px);;
-animation: ${floatingAnimation} 5s ease-in-out infinite;
 flex-direction: column;
 align-items: center;
 cursor: pointer;
+`;
 
-&:hover {
-  animation-play-state: paused;
-}
+export const TypeBox = styled.div`
+height: 300px;
 `;
 
 export const  ContextButton = styled.button`

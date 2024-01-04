@@ -61,6 +61,12 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 gap: 60px;
+
+animation: ${floatingAnimation} 5s ease-in-out infinite;
+
+&:hover {
+  animation-play-state: paused;
+}
 `;
 
 
@@ -74,13 +80,10 @@ background: rgba(37, 0, 38, 0.4);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(9px);
-animation: ${floatingAnimation} 5s ease-in-out infinite;
 flex-direction: column;
 align-items: center;
 
-&:hover {
-  animation-play-state: paused;
-}
+
 `;
 
 export const HelperImg = styled.img`

@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-import TypeIt from 'typeit-react';
-
 import { HelperContainer, CharacterContainer, HelperImg, SageNameContainer, SageName } from './styled';
 
 import { HelperContext } from '../helperContext/helperContext';
@@ -26,14 +24,7 @@ export const Helper = ({helper, side, name, btnText}) => {
           <HelperImg src={helper} />
           <SageNameContainer status={helperStatus}>
             <SageName  status={helperStatus}>
-                <TypeIt
-                  options={{
-                    speed: 200, // Adjust the speed value to control the typing speed
-                    wait: 1500 // Add a 1.5-second delay before typing starts
-                  }}
-                >
                   {name}
-                </TypeIt>
             </SageName >
           </SageNameContainer>
         </CharacterContainer>

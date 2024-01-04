@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import sageBg from '../../images/sageBg.jpg';
 import { colors, vars } from '../../styles/colors';
 
+
 export const SageContainer = styled.div`
 width: 100%;
 border-bottom: 5px solid ${colors.footerBorder};
@@ -10,14 +11,33 @@ box-shadow: ${vars.footerShadows};
 `;
 
 export const SageBg = styled.div`
-padding: 300px 30px 180px 30px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 440px 30px 180px 30px;
 background-image: url(${sageBg});
 background-size: cover;
 background-position-y: bottom;
 height: 100%;
-justify-content: space-between;
-display: flex;
 `;
+
+export const HelperContainer = styled.div`
+display: flex;
+justify-content: space-between;
+`;
+
+export const LinksContainer = styled.div`
+margin-top: 100px;
+border: 1px solid  #f257ff75;
+border-radius: 16px;
+display: flex;
+justify-content: center;
+
+background: rgba(37, 0, 38, 0.4);
+box-shadow: 0 4px 30px rgba(255, 2, 251);
+backdrop-filter: blur(9px);
+`;
+
 
 export const ContentContainer = styled.div`
 justify-content: end;
