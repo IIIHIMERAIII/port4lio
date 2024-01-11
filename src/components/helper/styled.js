@@ -76,10 +76,12 @@ width: 100%;
 display: flex;
 flex-direction: row;
 justify-content: center;
+
 background: rgba(37, 0, 38, 0.4);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(9px);
+
 flex-direction: column;
 align-items: center;
 

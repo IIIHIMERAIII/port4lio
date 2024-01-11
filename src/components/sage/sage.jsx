@@ -4,7 +4,20 @@ import helper2 from  '../../images/helper2.png';
 import helper1 from '../../images/helper.png';
 
 import { Helper } from "../helper/helper";
-import { GitLink } from "../gitLink/gitLink";
+import { SocialLink } from "../socialLink/socialLink";
+
+
+const  items = [
+    {
+        icon: 'github',
+    },
+    {
+        icon: 'linkedin',
+    },
+    {
+        icon: 'steam',
+    }
+]
 
 export const Sage = () => {
     return (
@@ -25,15 +38,12 @@ export const Sage = () => {
                     />
                 </HelperContainer>
                 <LinksContainer>
-                    <GitLink
-                        iconName='github'
+                {items.map((item, index) => (
+                    <SocialLink
+                        key={index}
+                        iconName={item.icon}
                     />
-                    <GitLink
-                        iconName='linkedin'
-                    />
-                    <GitLink
-                        iconName='steam'
-                    />
+                ))}
                 </LinksContainer>
             </SageBg>
         </SageContainer>

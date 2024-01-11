@@ -27,15 +27,9 @@ justify-content: space-between;
 `;
 
 export const LinksContainer = styled.div`
-margin-top: 100px;
-border: 1px solid  #f257ff75;
-border-radius: 16px;
+gap: 30px;
 display: flex;
 justify-content: center;
-
-background: rgba(37, 0, 38, 0.4);
-box-shadow: 0 4px 30px rgba(255, 2, 251);
-backdrop-filter: blur(9px);
 `;
 
 

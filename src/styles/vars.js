@@ -1,7 +1,10 @@
 export const tabText = {
-    tab1: `The ethereal glow of the resplendent moon illuminated the night, casting an ineffable beauty across the landscape. As I walked through the vellichor-filled library, I experienced an epiphany, realizing the power of words to evoke emotions.`,
-    tab2: 'As I walked through the vellichor-filled library, I experienced an epiphany, realizing the power of words to evoke emotions. The ethereal glow of the resplendent moon illuminated the night, casting an ineffable beauty across the landscape.',
-    tab3: 'The mellifluous notes of the sonorous melody created an evanescent moment of serendipity, leaving a lingering sense of jubilation in the air. As I walked through the vellichor-filled library, I experienced an epiphany, realizing the power of words to evoke emotions'
+    tabAlt1:'beautiful futuristic spaceship',
+    tabAlt2: 'steel space giant is ready to fly to the stars',
+    tabAlt3: 'Сontacts',
+    tab1: `Here you can quickly find information about the place where you are. The link above will take you to a page with more detailed information and links. Enjoy your viewing`,
+    tab2: 'Here is a gallery of everything that is on the site, and other interesting projects.',
+    tab3: 'Here are my contact details and some information about me.'
 }
 
 export const animation = {

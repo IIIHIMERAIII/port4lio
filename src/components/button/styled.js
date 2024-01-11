@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom';
+
 import { vars } from '../../styles/colors';
 
-export const BtnContainer = styled.div`
+export const BtnContainer = styled(Link)`
 width: 270px;
+text-decoration: none;
 `;
 
 
-export const Btn = styled.button`
+export const Btn = styled.div`
   width: 270px;
   height: 50px;
   background-color: transparent;
@@ -51,7 +54,9 @@ export const Btn = styled.button`
   }
 `;
 
-export const BtnTitle = styled.a`
+export const BtnTitle = styled.p`
+text-align: center;
+margin-top: 10px;
 font-size: 23px;
 line-height: 1.3;
 letter-spacing: 0.135em;
