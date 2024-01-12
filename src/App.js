@@ -14,7 +14,6 @@ function App() {
           element={
             <>
               {/* No Header on Home */}
-              <Header />
               <Home />
             </>
           }
