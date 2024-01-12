@@ -1,7 +1,7 @@
+import { Info } from "../../components/info/info.jsx";
+
 export const InfoPage = () => {
     return (
-        <div>
-            <p>gaasgsagsa</p>
-        </div>
+        <Info/>
     )
 }
