@@ -8,11 +8,9 @@ export const InfoTabsContainer = styled.div`
 
 `;
 
-export const TabTitle = styled.h1`
-margin-top: 120px;
-margin-bottom: 50px;
-text-align: center;
-color: ${colors.white};
+export const TabTitleContainet = styled.div`
+display: flex;
+margin-top: 90px;
 `;
 
 export const TabContainer = styled.div`

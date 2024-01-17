@@ -5,11 +5,10 @@ export const Header = () => {
         <HeaderContainer>
             <HeaderTitle>Navigation</HeaderTitle>
             <HeaderNav>
-                <NavLink>Link</NavLink>
-                <NavLink>Link</NavLink>
-                <NavLink>Link</NavLink>
-                <NavLink>Link</NavLink>
-                <NavLink>Link</NavLink>
+                <NavLink to='/'>Home</NavLink>
+                <NavLink>Contacts</NavLink>
+                <NavLink>Partfolio</NavLink>
+                <NavLink>Some link</NavLink>
             </HeaderNav>
         </HeaderContainer>
     )

@@ -1,0 +1,36 @@
+[
+    {  
+      "text": "0 Hello, nice to meet you! I am your personal assistant for the time being; it seems I have no choice in the matter.  If you need anything let me know.", 
+      "btnContext":"Ok",
+      "btn2Context": false,
+      "showInput": false,
+      "closeHelper": false
+    },
+    { 
+      "text": "1 And I almost forgot, how should I refer to you?", 
+      "btnContext":"Keep silent",
+      "btn2Context":"Enter name",
+      "showInput": false,
+      "closeHelper": false
+    },
+    {
+      "text": "2 Okay, since you're complaining, I won't insist.", 
+      "btnContext": "Close",
+      "btn2Context": false,
+      "showInput": false,
+      "closeHelper": true
+    },
+    {
+      "text": "3 Just type it here", 
+      "btnContext":"Say my name",
+      "showInput": true,
+      "closeHelper": false
+    },
+    {
+      "text": "Hi {userName} I'm Kayleigh. Okay, look around here while I'm nearby if anything happens.", 
+      "btnContext":"See u",
+      "showInput": false,
+      "closeHelper": true
+    }
+  ]
+  
