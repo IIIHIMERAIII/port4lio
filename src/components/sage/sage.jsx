@@ -24,18 +24,7 @@ export const Sage = () => {
         <SageContainer>
             <SageBg>
                 <HelperContainer>
-                    <Helper
-                        helper={helper1}
-                        side='right'
-                        name='Keyle \PinkQueen\'
-                        btnText='More info'
-                    />
-                    <Helper
-                        helper={helper2}
-                        side='left'
-                        name='Wallority \SolarDaughter\'
-                        btnText='Apply'
-                    />
+                    <a>helper</a>
                 </HelperContainer>
                 <LinksContainer>
                 {items.map((item, index) => (
