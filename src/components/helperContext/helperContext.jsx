@@ -42,6 +42,7 @@ export const HelperContext = ({props}) => {
       ) }
       { props.btn2Context && ( 
           <ContextButton
+            to={props.redirect}
             onClick={props.btn2Event}
           >
             2 {props.btn2Context}

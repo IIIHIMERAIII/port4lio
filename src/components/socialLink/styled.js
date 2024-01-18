@@ -1,40 +1,36 @@
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom';
+
 export const Svg = styled.svg`
-width: 100%;
 height: 100%;
+width: 100%;
 border-radius: 50%;
-fill: black; /* Set initial fill color */
-transition: fill 0.3s ease-in-out; /* Add transition to fill and transform */s
+fill: #fffdfd36;
+transition: all 0.5s ease-in-out; /* Add transition to fill and transform */s
 `;
 
-export const SocialLinkContainer = styled.div`
-gap: 20px;
+export const SocialLinkContainer = styled(Link)`
+padding: 20px;
+border-radius: 50%;
 justify-content: center;
 align-items: center;
 display: flex;
 cursor: pointer;
-overflow: hidden;
-border-radius: 50px;
-background: #37373785;
 
-/* Animation for changing width */
-transition: width 0.5s ease-in-out, background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-
-&:hover {
-    width: 20%;
-    transition-delay: 0.5s;
-
-    /* Box shadow and background color animation on hover */
-    box-shadow: 0 0 5px rgb(255, 2, 251), 0 0 5px #38015e inset;
-    background: #000000c9;
-    ${Svg} {
-        fill: white;
-        /* Fill color animation on hover */
-        transition: fill 0.5s ease-in-out;
-    }
-}
+&:hover ${Svg} {
+    fill: #a73229eb;
+    height: 150%;
+    width: 150%;
+  }
 `;
+
+export const LinksContainer = styled.div`
+gap: 30px;
+display: flex;
+justify-content: center;
+`;
+
 
 export const SvgWrapper = styled.div`
 

@@ -137,11 +137,10 @@ transition: all 0.5s ease-out;
 `;
 
 export const TabsContainer = styled.div`
+z-index: 1;
 width: 100%;
 display: flex;
 pointer-events: ${({ isClick }) => (isClick ? 'auto' : 'none')};
-z-index: 1;
-height: 100vh;
 `; 
 
 export const LeftTab = styled.div`

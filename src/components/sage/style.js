@@ -11,6 +11,7 @@ box-shadow: ${vars.footerShadows};
 `;
 
 export const SageBg = styled.div`
+position: relative;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -24,12 +25,6 @@ height: 100%;
 export const HelperContainer = styled.div`
 display: flex;
 justify-content: space-between;
-`;
-
-export const LinksContainer = styled.div`
-gap: 30px;
-display: flex;
-justify-content: center;
 `;
 
 

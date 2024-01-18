@@ -1,36 +1,66 @@
 [
     {  
-      "text": "0 Hello, nice to meet you! I am your personal assistant for the time being; it seems I have no choice in the matter.  If you need anything let me know.", 
+      "id": 0,
+      "text": "Hello, nice to meet you! I am your personal assistant for the time being; it seems I have no choice in the matter.  If you need anything let me know.", 
       "btnContext":"Ok",
       "btn2Context": false,
       "showInput": false,
       "closeHelper": false
     },
-    { 
-      "text": "1 And I almost forgot, how should I refer to you?", 
+    {   
+      "id": 1,
+      "text": "And I almost forgot, how should I refer to you?", 
       "btnContext":"Keep silent",
       "btn2Context":"Enter name",
       "showInput": false,
       "closeHelper": false
     },
     {
-      "text": "2 Okay, since you're complaining, I won't insist.", 
+      "id": 2,
+      "text": "Okay, since you're complaining, I won't insist.", 
       "btnContext": "Close",
       "btn2Context": false,
       "showInput": false,
       "closeHelper": true
     },
     {
-      "text": "3 Just type it here", 
+      "id": 3,
+      "text": "Just type it here", 
       "btnContext":"Say my name",
       "showInput": true,
       "closeHelper": false
     },
-    {
+    { 
+      "id": 4,
       "text": "Hi {userName} I'm Kayleigh. Okay, look around here while I'm nearby if anything happens.", 
       "btnContext":"See u",
       "showInput": false,
       "closeHelper": true
+    },
+    {
+      "id": 5,
+      "text": "Hello again {userName}. Do you still remember that you can always find out information from me? ", 
+      "btnContext":"Yes but there's no need for that",
+      "btn2Context": "Oh you're just in time",
+      "showInput": false,
+      "closeHelper": true
+    },
+    {
+      "id": 6,
+      "text": "We are in this", 
+      "btnContext":"Got it",
+      "btn2Context": "More info",
+      "showInput": false,
+      "closeHelper": true
+    },
+    {
+      "id": 6,
+      "text": "More info more more more more more", 
+      "btnContext":"Stay here",
+      "btn2Context": "Go to Training center",
+      "showInput": false,
+      "closeHelper": true,
+      "redirect": true
     }
   ]
   

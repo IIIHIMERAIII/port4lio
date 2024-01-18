@@ -55,7 +55,7 @@ const scaleAnimation = keyframes`
 
 
 export const HelperContainer = styled.div`
-position: fixed;
+position: absolute;
 height: 300px;
 width: 700px;
 display: flex;
@@ -64,8 +64,7 @@ justify-content: center;
 gap: 60px;
 
 background: rgba(37, 0, 38, 0.4);
-border-top-right-radius: 16px;
-border-bottom-right-radius: 16px;
+border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(9px);
 

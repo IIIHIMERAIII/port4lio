@@ -11,7 +11,7 @@ export const Helper = ({props}) => {
       ...props.scenario
     }
 
-    // console.log(prop)
+
 
     return (
       <HelperContainer >

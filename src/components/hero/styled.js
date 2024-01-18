@@ -1,30 +1,71 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import TypeIt from 'typeit-react';
 
-import heroBg from  '../../images/PB.jpg'
+import heroBg from  '../../images/heroBg.png';
+import heroBgBlack from '../../images/heroBgBlack.png';
+
 
 import {colors, vars } from '../../styles/colors';
 
-
-export const HeroContainer = styled.div`
-  text-align: center;
-  padding-top: 100px;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(-100%);
-  background-color: ${colors.grayBg}; /* Add  background color */
-  background-image: url(${heroBg});
-  background-size: cover;
-  transition: opacity 2.7s ease, transform 2.7s ease, background-color 1.7s ease; /* Include background-color in the transition */
-
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-    background-color: #5c605f70; /* Set background-color to transparent when visible */
+const moveForward = keyframes`
+  from {
+    background-position-x: 1px;
+  }
+  to {
+    background-position-x: -2000px;
   }
 `;
 
+export const HeroBg = styled.div`
+  position: absolute;
+  background-image: url(${heroBgBlack});
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 1400px;
+  width: 100%;
+  
+  background-position-x: 1px;
+  animation: ${moveForward} 60s linear infinite alternate; /* 10s all road */
+  
+  
 
-export const HeroTitle = styled.a`
-  font-size: 50px;
-  color: white;
+
+
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+`;
+
+export const HeroOverlay = styled.div`
+position: relative;
+background-image: url(${heroBg});
+background-position: bottom;
+background-repeat: no-repeat;
+height: 1400px;
+width: 100%;
+
+background-position-x: 1px;
+animation: ${moveForward} 60s linear infinite alternate; /* 10s all road */
+
+&:hover ${HeroBg} {
+  opacity: 0.1;
+}
+
+`;
+
+export const HeroContainer = styled.div`
+z-index: 5;
+position: relative;
+padding-top: 120px;
+height: 100%;
+`;
+
+export const HeroTitle = styled(TypeIt)`
+padding: 20px 0 20px 0;
+border-top: 2px solid white;
+border-bottom: 2px solid white;
+justify-content: center;
+align-items: center;
+display: flex;
+font-size: 50px;
+color: white;
 `;
