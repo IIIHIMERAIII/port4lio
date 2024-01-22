@@ -26,8 +26,8 @@ width: 15%;
 height: 80px;
 
 border-color: transparent;
-border-right: 5px solid #ffffff5e;
-border-left: 5px solid #ffffff5e;
+border-right: 5px solid white;
+border-left: 5px solid white;
 border-radius: 16px;
 box-shadow: 0px 0px 23px 12px #F5F5F54A;
 
