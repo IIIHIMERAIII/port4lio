@@ -1,13 +1,30 @@
 import TypeIt from 'typeit-react';
+import { useState } from 'react';
 
-import { HeroOverlay, HeroContainer, HeroBg, HeroTitle } from './styled';
+import { HeroActivator } from '../heroActivator/heroActivator';
+
+import { HeroOverlay, HeroContainer, HeroBg, TitleContainer, HeroTitle,} from './styled';
+
 
 export const Hero = () => {
+  const [activatorHover, setActivator] = useState(false);
+
+  const onHover = (isHovered) => {
+    setActivator(isHovered); 
+    console.log(activatorHover)  
+  };
+
   return (
-    <HeroOverlay>
-        <HeroBg/>
+    <HeroOverlay 
+      overlay={activatorHover}
+    >
+        <HeroBg 
+          overlay={activatorHover}
+        />
         <HeroContainer>
-          <HeroTitle>Hi Dudes</HeroTitle>
+          <HeroActivator
+            event={onHover}
+          />
         </HeroContainer>
     </HeroOverlay>
   );

@@ -25,13 +25,14 @@ export const HeroBg = styled.div`
   width: 100%;
   
   background-position-x: 1px;
-  animation: ${moveForward} 60s linear infinite alternate; /* 10s all road */
+  animation: ${moveForward} 150s linear infinite alternate; /* 10s all road */
   
   
 
 
 
-  opacity: 1;
+  opacity: ${props => (props.overlay ? '0.1' : '1')};
+
   transition: opacity 0.7s ease-in-out;
 `;
 
@@ -44,12 +45,7 @@ height: 1400px;
 width: 100%;
 
 background-position-x: 1px;
-animation: ${moveForward} 60s linear infinite alternate; /* 10s all road */
-
-&:hover ${HeroBg} {
-  opacity: 0.1;
-}
-
+animation: ${moveForward} 150s linear infinite alternate; /* 10s all road */
 `;
 
 export const HeroContainer = styled.div`
@@ -59,10 +55,16 @@ padding-top: 120px;
 height: 100%;
 `;
 
+export const TitleContainer = styled.div`
+border-color: transparent;
+border-right: 2px solid red;
+border-left: 2px solid red;
+border-radius: 16px;
+`;
+
 export const HeroTitle = styled(TypeIt)`
 padding: 20px 0 20px 0;
-border-top: 2px solid white;
-border-bottom: 2px solid white;
+border-color: transparent;
 justify-content: center;
 align-items: center;
 display: flex;
